@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generator United - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional CSS for modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            overflow: auto;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            position: relative;
+            width: 80%;
+            max-width: 1200px;
+            text-align: center;
+        }
+
+        .modal-content video {
+            width: 100%;
+            height: auto;
+        }
+
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #ffffff;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 class="header-logo">
+            <img src="Images/GU%20LOGO.png" alt="Your Logo" class="logo-img">
+        </h1>
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="portfolio">
+        <div class="container">
+            <h2>Our Portfolio</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                <img src="ThumbnailsNew/13.png" alt="Video Thumbnail" class="video-thumbnail" data-video-src="PortfolioVids/1.mp4">
+                <p>REXONA SOPHIE MONK</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="ThumbnailsNew/14.png" alt="Video Thumbnail" class="video-thumbnail" data-video-src="PortfolioVids/2.mp4">
+                <p>PRIMO LEG HAM</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="ThumbnailsNew/15.png" alt="Video Thumbnail" class="video-thumbnail" data-video-src="PortfolioVids/3.mp4">
+                <p>SUPERCHEAP AUTO</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="ThumbnailsNew/16.png" alt="Video Thumbnail" class="video-thumbnail" data-video-src="PortfolioVids/4.mp4">
+                <p>PRIMO SALAMI STICKS</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="ThumbnailsNew/17.png" alt="Video Thumbnail" class="video-thumbnail" data-video-src="PortfolioVids/5.mov">
+                <p>BBQG FATHERS DAY</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="ThumbnailsNew/18.png" alt="Video Thumbnail" class="video-thumbnail" data-video-src=PortfolioVids/6.mp4>
+                <p>SUPERCHEAP AUTO HEAVY DUTY TOYS</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="ThumbnailsNew/19.png" alt="Video Thumbnail" class="video-thumbnail" data-video-src="PortfolioVids/7.mp4">
+                <p>BRASS MONKEY FREEZERS</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="ThumbnailsNew/20.png" alt="Video Thumbnail" class="video-thumbnail" data-video-src="PortfolioVids/8.mp4">
+                <p>HEARING AUSTRALIA</p>
+            </div><div class="portfolio-item">
+                <img src="ThumbnailsNew/21.png" alt="Video Thumbnail" class="video-thumbnail" data-video-src="PortfolioVids/9.mp4">
+                <p>INSPIRATIONS PAINT</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="ThumbnailsNew/22.png" alt="Video Thumbnail" class="video-thumbnail" data-video-src="PortfolioVids/10.mp4">
+                <p>PRIMO MICROWAVE BACON</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="ThumbnailsNew/23.png" alt="Video Thumbnail" class="video-thumbnail" data-video-src="PortfolioVids/11.mp4">
+                <p>SHOES & SOX FIT SQUAD</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="ThumbnailsNew/24.png" alt="Video Thumbnail" class="video-thumbnail" data-video-src="PortfolioVids/12.mp4">
+                <p>LYNX 48 HOURS</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="ThumbnailsNew/25.png" alt="Video Thumbnail" class="video-thumbnail" data-video-src="PortfolioVids/13.mp4">
+                <p>SUPERCHEAP AUTO BATHURST DAY</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="ThumbnailsNew/26.png" alt="Video Thumbnail" class="video-thumbnail" data-video-src="PortfolioVids/14.mp4">
+                <p>TRESEMME RESTYLED</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="ThumbnailsNew/27.png" alt="Video Thumbnail" class="video-thumbnail" data-video-src="PortfolioVids/15.mp4">
+                <p>COMFORT SCENT BOOSTERS</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="ThumbnailsNew/28.png" alt="Video Thumbnail" class="video-thumbnail" data-video-src="PortfolioVids/16.mp4">
+                <p>FLORA EAT GOOD</p>
+            </div><div class="portfolio-item">
+                <img src="Thumbnails/36.png" alt="Video Thumbnail" class="video-thumbnail" data-video-src="DarrenVids/36.mp4">
+                <p>PRIMO STACKERS</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="Thumbnails/40.png" alt="Video Thumbnail" class="video-thumbnail" data-video-src="DarrenVids/40.mp4">
+                <p>HYUNDAI A-LEAGUE</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="Thumbnails/6.png" alt="Video Thumbnail" class="video-thumbnail" data-video-src="DarrenVids/6.mp4">
+                <p>SCHMIDT'S 24 HOURS</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="ThumbnailsNew/32.png" alt="Video Thumbnail" class="video-thumbnail" data-video-src="DarrenVids/1.mp4">
+                <p>AUSSIE HOME LOANS</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="Thumbnails/3.png" alt="Video Thumbnail" class="video-thumbnail" data-video-src="DarrenVids/3.mp4">
+                <p>REXONA CRICKET</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="ThumbnailsNew/34.png" alt="Video Thumbnail" class="video-thumbnail" data-video-src="DarrenVids/17.mp4">
+                <p>AALIANNZ INSURANCE</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="ThumbnailsNew/35.png" alt="Video Thumbnail" class="video-thumbnail" data-video-src="DarrenVids/32.mp4">
+                <p>REXONA ALL BLACKS</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="ThumbnailsNew/36.png" alt="Video Thumbnail" class="video-thumbnail" data-video-src="DarrenVids/41.mp4">
+                <p>REXONA MEN ATHLETE</p>
+            </div>
+                <!-- Add more portfolio items as needed -->
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Generator United. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div class="modal"></div> <!-- Modal container -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js"
+        integrity="sha512-3iy3qnF+XGzUQ/hKNV5XDTsJ6R+e+0UHuRrswsZFWc9i9W35HxqppjLsCCDj0XkARgkOzZId8aWB7FTeIEaXvg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const portfolioItems = document.querySelectorAll('.portfolio-item');
+            const modal = document.querySelector('.modal');
+
+            portfolioItems.forEach(item => {
+                const thumbnail = item.querySelector('.video-thumbnail');
+                const videoSrc = thumbnail.getAttribute('data-video-src');
+
+                thumbnail.addEventListener('click', function () {
+                    modal.innerHTML = `
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <video id="modalVideo" controls autoplay>
+                                <source src="${videoSrc}" type="video/mp4">
+                                Your browser does not support HTML5 video.
+                            </video>
+                        </div>
+                    `;
+                    modal.style.display = 'flex'; // Display modal when a thumbnail is clicked
+
+                    // Play the video when modal is displayed
+                    const modalVideo = document.getElementById('modalVideo');
+                    modalVideo.play();
+                });
+            });
+
+            modal.addEventListener('click', function (event) {
+                if (event.target.classList.contains('close') || event.target === modal) {
+                    modal.style.display = 'none'; // Close modal when close button or outside modal is clicked
+
+                    // Pause video when modal is closed
+                    const modalVideo = document.getElementById('modalVideo');
+                    modalVideo.pause();
+                }
+            });
+
+            document.addEventListener('visibilitychange', function () {
+                if (document.visibilityState === 'hidden') {
+                    modal.style.display = 'none'; // Hide modal when tab is switched
+
+                    // Pause video when tab is switched
+                    const modalVideo = document.getElementById('modalVideo');
+                    modalVideo.pause();
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
