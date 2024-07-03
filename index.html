@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generator United</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <style>
+        /* Additional CSS for modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            overflow: auto;
+            justify-content: center;
+            align-items: center;
+            display: flex; /* Center content vertically and horizontally */
+        }
+
+        .modal-content {
+            position: relative;
+            width: 80%;
+            max-width: 1200px;
+            text-align: center;
+        }
+
+        .modal-content video {
+            width: 100%;
+            height: auto;
+        }
+
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #ffffff;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 class="header-logo">
+            <img src="Images/GU%20LOGO.png" alt="Your Logo" class="logo-img">
+        </h1>
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <button id="mute-toggle" class="btn">Mute</button>
+    </header>
+
+    <section id="home">
+        <video autoplay loop id="bg-video">
+            <source src="Gu%20Website%20Hr.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h1>About us</h1>
+            <h2>Collaboration lies at the heart of all we do at Generator United, and we’d like to think we do it well. And driving this Collaboration, is our Campaign Production Director model. Our CPD model, means collaborating early in the process, helping manage entire projects, with long term objectives and deliverables in mind. From the conception of ideas, creation of campaign material, through to implementation of all assets, across all channels. This CPD assistance and Collaboration can be scaled up or down, depending upon what is required. Through this collaboration, experience and production craft and management, your brand message reaches more people, across more channels, more cost effectively via our Campaign Production Director model.</h2>
+        </div>
+    </section>
+<section id="portfolio">
+    <div class="container">
+        <h2>Our Portfolio</h2>
+        <div class="portfolio-grid">
+            <div class="portfolio-item">
+                <img src="ThumbnailsNew/1.png" alt="Video Thumbnail" class="video-thumbnail" data-video-src="HomeVids/1.mp4">
+                <p>REXONA NATHAN CLEARY</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="ThumbnailsNew/2.png" alt="Video Thumbnail" class="video-thumbnail" data-video-src="HomeVids/2.mp4">
+                <p>PRIMO FIND YOUR ROAR</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="ThumbnailsNew/3.png" alt="Video Thumbnail" class="video-thumbnail" data-video-src="HomeVids/3.mov">
+                <p>FREEDOM CASTAWAY</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="ThumbnailsNew/4.png" alt="Video Thumbnail" class="video-thumbnail" data-video-src="HomeVids/4.mp4">
+                <p>BRASS MONKEY</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="ThumbnailsNew/5.png" alt="Video Thumbnail" class="video-thumbnail" data-video-src="HomeVids/5.mp4">
+                <p>BBQG</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="ThumbnailsNew/6.png" alt="Video Thumbnail" class="video-thumbnail" data-video-src="HomeVids/6.mp4">
+                <p>BOSS COFFEE</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="ThumbnailsNew/7.png" alt="Video Thumbnail" class="video-thumbnail" data-video-src="HomeVids/7.mp4">
+                <p>PRIMO STACKERS</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="ThumbnailsNew/8.png" alt="Video Thumbnail" class="video-thumbnail" data-video-src="HomeVids/8.mp4">
+                <p>TRESEMME PRO COLLECTION</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="ThumbnailsNew/9.png" alt="Video Thumbnail" class="video-thumbnail" data-video-src="HomeVids/9.mp4">
+                <p>PRIMO PREMIUM BACON</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="ThumbnailsNew/10.png" alt="Video Thumbnail" class="video-thumbnail" data-video-src="HomeVids/10.mp4">
+                <p>REXONA CRICKET</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="ThumbnailsNew/11.png" alt="Video Thumbnail" class="video-thumbnail" data-video-src="HomeVids/11.mp4">
+                <p>MGHS</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="ThumbnailsNew/12.png" alt="Video Thumbnail" class="video-thumbnail" data-video-src="HomeVids/12.mp4">
+                <p>HANS</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <section id="about">
+        <div class="container">
+            <h2>Powerful thing collaboration. With collaboration, discussions are had, ideas shared, boundaries pushed, expectations reached and hopefully, exceeded. While some projects require many people collaborating together to achieve the outcome, others require only a few. What they will always require however, is collaboration. Generator United has had the good fortune to work with many great clients, agencies, marketing and production specialists over many years, who have shared the spirit of collaboration to produce work and results that we are truly proud of. </h2>
+            <h2>Up for a collaboration?</h2>
+        </div>
+        <div class="contact-section" id="logo-section">
+            <img src="Images/New%20Project%20(1).png" alt="GenU">
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <div class="contact-wrapper">
+                <div class="contact-section" id="info-section">
+
+                    <div class="info-box">
+                        <p>PO BOX 1058</p>
+                        <p>HUNTERS HILL, NSW 2110</p>
+                        <p>SYDNEY, AUSTRALIA</p>
+                    </div>
+                    <div class="info-box">
+                        <p>DBAILEY@GENERATORUNITED.COM.AU</p>
+                        <p>MOB: 0419 010 803</p>
+                        <p><a href="https://www.linkedin.com/in/darren-bailey-91257511/?originalSubdomain=au"
+                                target="_blank" class="linkedin-link">
+                                LINKED IN PROFILE
+                            </a>
+                        </p>
+                    </div>
+                    <div class="info-box">
+                        <p>WEWORK, LEVEL 28</p>
+                        <p>161 CASTLEREAGH ST</p>
+                        <p>NSW 2000, SYDNEY, AUSTRALIA</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Generator United. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js"
+        integrity="sha512-3iy3qnF+XGzUQ/hKNV5XDTsJ6R+e+0UHuRrswsZFWc9i9W35HxqppjLsCCDj0XkARgkOzZId8aWB7FTeIEaXvg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        var scroll = new SmoothScroll('a[href*="#"]');
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const portfolioItems = document.querySelectorAll('.portfolio-item');
+            const modal = document.createElement('div');
+            modal.classList.add('modal');
+            modal.style.display = 'none';  // Ensure modal is hidden initially
+            document.body.appendChild(modal);
+            const bgVideo = document.getElementById('bg-video');
+
+            portfolioItems.forEach(item => {
+                const thumbnail = item.querySelector('.video-thumbnail');
+                const videoSrc = thumbnail.getAttribute('data-video-src');
+
+                thumbnail.addEventListener('click', function () {
+                    bgVideo.pause(); // Pause the background video
+                    modal.innerHTML = `
+                        <div class="modal-content">
+                            <video controls autoplay>
+                                <source src="${videoSrc}" type="video/mp4">
+                                Your browser does not support HTML5 video.
+                            </video>
+                            <span class="close">&times;</span>
+                        </div>
+                    `;
+                    modal.style.display = 'flex';
+                });
+            });
+
+            modal.addEventListener('click', function (event) {
+                if (event.target.classList.contains('close') || event.target === modal) {
+                    bgVideo.play(); // Resume the background video
+                    modal.style.display = 'none';
+                    modal.innerHTML = '';
+                }
+            });
+
+            document.getElementById('mute-toggle').addEventListener('click', function () {
+                bgVideo.muted = !bgVideo.muted;
+                this.textContent = bgVideo.muted ? 'Unmute' : 'Mute';
+            });
+        });
+    </script>
+</body>
+
+</html>
