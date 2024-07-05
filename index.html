@@ -65,12 +65,19 @@
         <button id="mute-toggle" class="btn">Mute</button>
     </header>
 
-    <section id="home">
-        <video autoplay loop id="bg-video">
+   <section id="home">
+    <div id="bg-video-container">
+        <video id="bg-video" autoplay loop unmuted>
             <source src="Gu%20Website%20Hr.mp4" type="video/mp4">
             Your browser does not support HTML5 video.
         </video>
-    </section>
+        <div id="video-thumbnail">
+            <img src="Gu%20Website%20Hr%20-%20frame%20at%200m7s.jpg" alt="Video Thumbnail">
+            <div class="play-button">&#9658;</div>
+        </div>
+    </div>
+</section>
+
 
     <section id="about">
         <div class="container">
@@ -189,6 +196,21 @@
     </script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
+        document.addEventListener('DOMContentLoaded', function () {
+    const video = document.getElementById('bg-video');
+    const thumbnail = document.getElementById('video-thumbnail');
+
+    thumbnail.addEventListener('click', function () {
+        thumbnail.style.display = 'none';
+        video.style.display = 'block';
+        video.play();
+    });
+
+    document.getElementById('mute-toggle').addEventListener('click', function () {
+        video.muted = !video.muted;
+        this.textContent = video.muted ? 'Unmute' : 'Mute';
+    });
+});
         document.addEventListener('DOMContentLoaded', function () {
             const portfolioItems = document.querySelectorAll('.portfolio-item');
             const modal = document.createElement('div');
