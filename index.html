@@ -67,7 +67,7 @@
 
    <section id="home">
     <div id="bg-video-container">
-        <video id="bg-video" autoplay loop unmuted>
+        <video id="bg-video">
             <source src="Gu%20Website%20Hr.mp4" type="video/mp4">
             Your browser does not support HTML5 video.
         </video>
@@ -189,69 +189,73 @@
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js"
-        integrity="sha512-3iy3qnF+XGzUQ/hKNV5XDTsJ6R+e+0UHuRrswsZFWc9i9W35HxqppjLsCCDj0XkARgkOzZId8aWB7FTeIEaXvg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script>
-        var scroll = new SmoothScroll('a[href*="#"]');
-    </script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-    const video = document.getElementById('bg-video');
-    const thumbnail = document.getElementById('video-thumbnail');
+    integrity="sha512-3iy3qnF+XGzUQ/hKNV5XDTsJ6R+e+0UHuRrswsZFWc9i9W35HxqppjLsCCDj0XkARgkOzZId8aWB7FTeIEaXvg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    var scroll = new SmoothScroll('a[href*="#"]');
+</script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const video = document.getElementById('bg-video');
+        const thumbnail = document.getElementById('video-thumbnail');
+        const modal = document.createElement('div');
+        modal.classList.add('modal');
+        modal.style.display = 'none';
+        document.body.appendChild(modal);
 
-    thumbnail.addEventListener('click', function () {
-        thumbnail.style.display = 'none';
-        video.style.display = 'block';
-        video.play();
-    });
+        thumbnail.addEventListener('click', function () {
+            thumbnail.style.display = 'none';
+            video.style.display = 'block';
+            video.play();
+        });
 
-    document.getElementById('mute-toggle').addEventListener('click', function () {
-        video.muted = !video.muted;
-        this.textContent = video.muted ? 'Unmute' : 'Mute';
-    });
-});
-        document.addEventListener('DOMContentLoaded', function () {
-            const portfolioItems = document.querySelectorAll('.portfolio-item');
-            const modal = document.createElement('div');
-            modal.classList.add('modal');
-            modal.style.display = 'none';  // Ensure modal is hidden initially
-            document.body.appendChild(modal);
-            const bgVideo = document.getElementById('bg-video');
+        document.getElementById('mute-toggle').addEventListener('click', function () {
+            video.muted = !video.muted;
+            this.textContent = video.muted ? 'Unmute' : 'Mute';
+        });
 
-            portfolioItems.forEach(item => {
-                const thumbnail = item.querySelector('.video-thumbnail');
-                const videoSrc = thumbnail.getAttribute('data-video-src');
+        const portfolioItems = document.querySelectorAll('.portfolio-item');
+        const bgVideo = document.getElementById('bg-video');
 
-                thumbnail.addEventListener('click', function () {
-                    bgVideo.pause(); // Pause the background video
-                    modal.innerHTML = `
-                        <div class="modal-content">
-                            <video controls autoplay>
-                                <source src="${videoSrc}" type="video/mp4">
-                                Your browser does not support HTML5 video.
-                            </video>
-                            <span class="close">&times;</span>
-                        </div>
-                    `;
-                    modal.style.display = 'flex';
-                });
-            });
+        portfolioItems.forEach(item => {
+            const thumbnail = item.querySelector('.video-thumbnail');
+            const videoSrc = thumbnail.getAttribute('data-video-src');
 
-            modal.addEventListener('click', function (event) {
-                if (event.target.classList.contains('close') || event.target === modal) {
-                    bgVideo.play(); // Resume the background video
-                    modal.style.display = 'none';
-                    modal.innerHTML = '';
-                }
-            });
-
-            document.getElementById('mute-toggle').addEventListener('click', function () {
-                bgVideo.muted = !bgVideo.muted;
-                this.textContent = bgVideo.muted ? 'Unmute' : 'Mute';
+            thumbnail.addEventListener('click', function () {
+                bgVideo.pause(); // Pause the background video
+                modal.innerHTML = `
+                    <div class="modal-content">
+                        <video controls autoplay>
+                            <source src="${videoSrc}" type="video/mp4">
+                            Your browser does not support HTML5 video.
+                        </video>
+                        <span class="close">&times;</span>
+                    </div>
+                `;
+                modal.style.display = 'flex';
             });
         });
-    </script>
+
+        modal.addEventListener('click', function (event) {
+            if (event.target.classList.contains('close') || event.target === modal) {
+                modal.style.display = 'none';
+                modal.innerHTML = '';
+            }
+        });
+
+        // Add event listener to the background video to toggle play/pause on click
+        bgVideo.addEventListener('click', function () {
+            if (bgVideo.paused) {
+                bgVideo.play();
+            } else {
+                bgVideo.pause();
+            }
+        });
+    });
+</script>
+
+
 </body>
 
 </html>
